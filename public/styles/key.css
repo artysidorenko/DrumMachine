@@ -1,0 +1,14 @@
+.key__container {
+  place-self: center;
+}
+
+.key__button {
+  background-color: grey;
+  color: black;
+  width: 100px;
+  height: 50px;
+}
+
+.key__button--lit {
+  background-color: rgb(202, 214, 103);
+}

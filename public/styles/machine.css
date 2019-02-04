@@ -1,0 +1,12 @@
+.machine__container {
+  background-color: rgb(198, 182, 147);
+  margin: 100px;
+}
+
+.machine__keypad {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  width: 400px;
+  border: 2px solid brown;
+}
