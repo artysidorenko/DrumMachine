@@ -48,9 +48,11 @@ export default class App extends React.Component {
   render() {
     return <div className='machine__container' id='drum-machine'>
       <Screen display={this.state.display} id='display'/>
+      <h3 className='machine__header'>PJSmooth's Drum Machine</h3>
       <Mode loop={this.state.loop} action={this.activateLoop} />
       <Reset action={this.reset}/>
       <div className='machine__keypad'>
+
         <Key letter="Q" sound={clapCrushed} onScreen={this.activateDisplay} name='clapCrushed' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} undoReset={this.undoReset} className='drum-pad'/>
         <Key letter="W" sound={clapTape} onScreen={this.activateDisplay} name='clapTape' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} undoReset={this.undoReset} className='drum-pad'/>
         <Key letter="E" sound={cowbell808} onScreen={this.activateDisplay} name='cowbell808' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} undoReset={this.undoReset} className='drum-pad'/>
@@ -60,6 +62,7 @@ export default class App extends React.Component {
         <Key letter="Z" sound={kickDry} onScreen={this.activateDisplay} name='kickDry' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} undoReset={this.undoReset} className='drum-pad'/>
         <Key letter="X" sound={percMetal} onScreen={this.activateDisplay} name='percMetal' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} undoReset={this.undoReset} className='drum-pad'/>
         <Key letter="C" sound={tomAcoustic} onScreen={this.activateDisplay} name='tomAcoustic' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} undoReset={this.undoReset} className='drum-pad'/>
+
       </div>
       <Tempo action={this.setTempo}/>
     </div>;
