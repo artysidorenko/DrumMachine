@@ -1,9 +1,11 @@
 .machine__container {
   background-color: rgb(198, 182, 147);
   margin: 100px;
-  border: 10px solid grey;
+  border-top: 5px inset grey;
+  border-right: 10px inset grey;
+  border-bottom: 10px inset grey;
+  border-left: 7px inset grey;
   border-radius: 10px;
-  border-style: inset;
   padding: 10px;
   width: 550px;
   height: 420px;
@@ -20,7 +22,5 @@
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   width: 400px;
-  /* border: 5px solid brown;
-  border-radius: 5px; */
   padding: 10px;
 }

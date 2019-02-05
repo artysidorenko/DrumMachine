@@ -72,6 +72,7 @@ class Key extends React.Component {
     else if (this.props.clear !== prevProps.clear && this.props.clear) {
       clearInterval(this.state.loopID);
       this.lightOff();
+      this.props.undoReset();
     }
   }
   render() {

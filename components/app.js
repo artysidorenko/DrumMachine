@@ -37,25 +37,29 @@ export default class App extends React.Component {
   reset() {
     this.setState({clear: true});
   }
+  undoReset() {
+    this.setState({clear: false});
+  }
   activateLoop = this.activateLoop.bind(this);
   activateDisplay = this.activateDisplay.bind(this);
   setTempo = this.setTempo.bind(this);
   reset = this.reset.bind(this);
+  undoReset = this.undoReset.bind(this);
   render() {
     return <div className='machine__container' id='drum-machine'>
       <Screen display={this.state.display} id='display'/>
       <Mode loop={this.state.loop} action={this.activateLoop} />
       <Reset action={this.reset}/>
       <div className='machine__keypad'>
-        <Key letter="Q" sound={clapCrushed} onScreen={this.activateDisplay} name='clapCrushed' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} className='drum-pad'/>
-        <Key letter="W" sound={clapTape} onScreen={this.activateDisplay} name='clapTape' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} className='drum-pad'/>
-        <Key letter="E" sound={cowbell808} onScreen={this.activateDisplay} name='cowbell808' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} className='drum-pad'/>
-        <Key letter="A" sound={hihat808} onScreen={this.activateDisplay} name='hihat808' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} className='drum-pad'/>
-        <Key letter="S" sound={hihatAcoustic} onScreen={this.activateDisplay} name='hihatAcoustic' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} className='drum-pad'/>
-        <Key letter="D" sound={kickAcoustic} onScreen={this.activateDisplay} name='kickAcoustic' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} className='drum-pad'/>
-        <Key letter="Z" sound={kickDry} onScreen={this.activateDisplay} name='kickDry' loop={this.state.loop} bpm={this.state.bpm} clear={false}/>
-        <Key letter="X" sound={percMetal} onScreen={this.activateDisplay} name='percMetal' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} className='drum-pad'/>
-        <Key letter="C" sound={tomAcoustic} onScreen={this.activateDisplay} name='tomAcoustic' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} className='drum-pad'/>
+        <Key letter="Q" sound={clapCrushed} onScreen={this.activateDisplay} name='clapCrushed' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} undoReset={this.undoReset} className='drum-pad'/>
+        <Key letter="W" sound={clapTape} onScreen={this.activateDisplay} name='clapTape' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} undoReset={this.undoReset} className='drum-pad'/>
+        <Key letter="E" sound={cowbell808} onScreen={this.activateDisplay} name='cowbell808' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} undoReset={this.undoReset} className='drum-pad'/>
+        <Key letter="A" sound={hihat808} onScreen={this.activateDisplay} name='hihat808' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} undoReset={this.undoReset} className='drum-pad'/>
+        <Key letter="S" sound={hihatAcoustic} onScreen={this.activateDisplay} name='hihatAcoustic' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} undoReset={this.undoReset} className='drum-pad'/>
+        <Key letter="D" sound={kickAcoustic} onScreen={this.activateDisplay} name='kickAcoustic' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} undoReset={this.undoReset} className='drum-pad'/>
+        <Key letter="Z" sound={kickDry} onScreen={this.activateDisplay} name='kickDry' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} undoReset={this.undoReset} className='drum-pad'/>
+        <Key letter="X" sound={percMetal} onScreen={this.activateDisplay} name='percMetal' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} undoReset={this.undoReset} className='drum-pad'/>
+        <Key letter="C" sound={tomAcoustic} onScreen={this.activateDisplay} name='tomAcoustic' loop={this.state.loop} bpm={this.state.bpm} clear={this.state.clear} undoReset={this.undoReset} className='drum-pad'/>
       </div>
       <Tempo action={this.setTempo}/>
     </div>;
