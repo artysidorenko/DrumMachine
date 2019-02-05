@@ -8,7 +8,7 @@ class Screen extends React.Component {
   render() {
     return (
       <div className='screen__container'>
-        <p className='screen__output'>Test Screen</p>
+        <p className='screen__output'>{this.props.display}</p>
       </div>
     )
   }

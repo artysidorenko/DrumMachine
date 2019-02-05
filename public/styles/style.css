@@ -1,0 +1,8 @@
+body {
+  background-color: rgb(238, 236, 209)
+}
+
+@font-face {
+ font-family: raptor;
+ src: url('./raptor_sans_font_by_rotweiler83.ttf');
+}

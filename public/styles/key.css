@@ -5,8 +5,14 @@
 .key__button {
   background-color: grey;
   color: black;
+  font-weight: bold;
+  font-size: large;
   width: 100px;
   height: 50px;
+  border: 6px solid rgb(174, 162, 198);
+  border-style: inset;
+  margin: 5px;
+  border-radius: 5px;
 }
 
 .key__button--lit {
