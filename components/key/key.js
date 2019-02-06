@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../public/styles/key.css';
+import '../../styles/key.css';
 
 class Key extends React.Component {
   state = {

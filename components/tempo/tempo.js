@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../public/styles/tempo.css';
+import '../../styles/tempo.css';
 
 class Tempo extends React.Component {
   handleChange = (event) => {

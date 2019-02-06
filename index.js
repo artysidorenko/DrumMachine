@@ -1,6 +1,8 @@
 import React from "react";
-import { render } from "react-dom";
+import ReactDom from "react-dom";
 import App from './components/app';
-// import "sanitize.css/sanitize.css";
 
-render(<App />, document.getElementById("root"));
+import 'sanitize.css';
+import './styles/style.css'
+
+ReactDom.render(<App />, document.getElementById("root"));
