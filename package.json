@@ -6,7 +6,10 @@
   "scripts": {
     "test": "jest --watch",
     "dev": "parcel index.html",
-    "build": "parcel build index.html --public-url ./"
+    "prebuild": "rm -rf dist",
+    "build": "parcel build index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -14,11 +17,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/artysidorenko/DrumMachine/issues"
   },
-  "homepage": "https://github.com/artysidorenko/DrumMachine#readme",
+  "homepage": "https://artysidorenko.github.io/DrumMachine/",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.3.0",
@@ -29,6 +32,7 @@
     "eslint-config-react-minimal": "^1.0.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-react": "^7.12.4",
+    "gh-pages": "^2.0.1",
     "parcel-bundler": "^1.11.0",
     "react-testing-library": "^5.4.4"
   },
