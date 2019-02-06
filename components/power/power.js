@@ -1,5 +1,5 @@
 // import React from 'react';
-// import '../../public/styles/switch.css';
+// import '../../styles/switch.css';
 //
 // const Power = (props) => {
 //   return (

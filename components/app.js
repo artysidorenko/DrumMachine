@@ -4,18 +4,18 @@ import Screen from './screen/screen';
 import Mode from './mode/mode';
 import Tempo from './tempo/tempo';
 import Reset from './reset/reset';
-import '../public/styles/machine.css';
+import '../styles/machine.css';
 
 // need to import entire contents of audio folder to enable wav playback :( ?
-import clapCrushed from '../public/audio/clap-crushed.wav';
-import clapTape from '../public/audio/clap-tape.wav';
-import cowbell808 from '../public/audio/cowbell-808.wav';
-import hihat808 from '../public/audio/hihat-808.wav';
-import hihatAcoustic from '../public/audio/hihat-acoustic02.wav';
-import kickAcoustic from '../public/audio/kick-acoustic02.wav';
-import kickDry from '../public/audio/kick-dry.wav';
-import percMetal from '../public/audio/perc-metal.wav';
-import tomAcoustic from '../public/audio/tom-acoustic02.wav';
+import clapCrushed from '../audio/clap-crushed.wav';
+import clapTape from '../audio/clap-tape.wav';
+import cowbell808 from '../audio/cowbell-808.wav';
+import hihat808 from '../audio/hihat-808.wav';
+import hihatAcoustic from '../audio/hihat-acoustic02.wav';
+import kickAcoustic from '../audio/kick-acoustic02.wav';
+import kickDry from '../audio/kick-dry.wav';
+import percMetal from '../audio/perc-metal.wav';
+import tomAcoustic from '../audio/tom-acoustic02.wav';
 
 export default class App extends React.Component {
   state = {
