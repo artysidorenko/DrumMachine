@@ -7,9 +7,7 @@
     "test": "jest --watch",
     "dev": "parcel index.html",
     "prebuild": "rm -rf dist",
-    "build": "parcel build index.html",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "build": "parcel build index.js --no-minify --public-url ./",
   },
   "repository": {
     "type": "git",
